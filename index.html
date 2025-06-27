@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <style>
+        :root {
+            --primary: #b688de;
+            --bg: #0f172a;
+            --text: #f1f5f9;
+            --card: #1e293b;
+            --hover: #af77d7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 220px;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        nav {
+            background: var(--card);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        section {
+            padding: 4rem 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #element {
+            color: rgb(228, 142, 215);
+            margin: 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            animation: fadeIn 1s ease;
+        }
+
+        .button {
+            color: black;
+            text-decoration: none;
+        }
+
+        .typed-cursor {
+            display: none !important;
+        }
+
+        p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            padding: 1rem;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            background: var(--hover);
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 2rem auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            padding: 1rem;
+            border: none;
+            background: var(--primary);
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #0ea5e9;
+        }
+
+        footer {
+            padding: 1rem;
+            text-align: center;
+            background: #1e293b;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Hi, I'm Samiksha</h1>
+        <img src="png1.jpg" alt="">
+        <p>I'm a frontend developer passionate about crafting clean, beautiful, and user-friendly websites with HTML,
+            CSS, JavaScript, and React.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1>About Me</h1>
+        <p>I’m a frontend developer who enjoys building responsive, interactive websites. I specialize in HTML, CSS,
+            JavaScript, React.js. I love solving real-world problems through code and learning new
+            technologies every day.</p>
+        <span id="element"></span>
+        <div class="buttons">
+            <button class="btn">Download Resume</button>
+            <button class="btn">
+                <a href="https://github.com/Sami0211" class="button">Visit GitHub</a>
+            </button>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h1>My Projects</h1>
+        <div class="projects">
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>I created a personal portfolio website using HTML, CSS, and JavaScript. This website is designed to
+                    showcase my skills, projects, and contact information in a clean and modern layout.</p>
+                <a href="https://1simple-portfolio.netlify.app/">Project 1</a>
+            </div>
+            <div class="card">
+                <h3>Headphone Product Landing Page</h3>
+                <p>I created a Headphone Product Landing Page using HTML, CSS, and JavaScript. It features a modern
+                    layout with product images, details and includes interactive elements like hover effects and smooth
+                    scrolling.</p>
+                <a href="https://2headphonespage.netlify.app/">Project 2</a>
+            </div>
+            <div class="card">
+                <h3>Netflix_clone</h3>
+                <p>A responsive replica of Netflix’s homepage, developed using HTML and CSS to emulate the platform's
+                    layout and design aesthetics.</p>
+                <a href="https://nclone3.netlify.app/">Project 3</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Samiksha Patil | Frontend Developer
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thanks for reaching out! I’ll get back to you soon.');
+            this.reset();
+        });
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: [' Frontend Developer.'],
+            typeSpeed: 50,
+        });
+    </script>
+
+</body>
+
+</html>
